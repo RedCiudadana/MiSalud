@@ -3000,24 +3000,25 @@
   resolved "https://registry.yarnpkg.com/@formatjs/intl-utils/-/intl-utils-2.2.4.tgz#fe62a96799d1f7dbe621fd38a4bd2e5a6a16cb0e"
   integrity sha512-83fsJywew0o9wQsW3VuEp33HRiFd0qbQDyFFnwZCwk59eLZ33CtKyJ5ofKMrU2KK6hk1zaIdzisrZeoNfmI3Tw==
 
-"@fortawesome/ember-fontawesome@0.1.9":
-  version "0.1.9"
-  resolved "https://registry.yarnpkg.com/@fortawesome/ember-fontawesome/-/ember-fontawesome-0.1.9.tgz#57c5647d59bcfa4516cf35952daf8f9b4e4b5c37"
-  integrity sha512-0+dmxvlg3PZjQ9bej4UB6I6+wtVzNy1b0q6w+D9uPz6Onj3NGKU1vtUK7a48aq8b4yjeSoLuxpaBSHdGhcKKLg==
+"@fortawesome/ember-fontawesome@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@fortawesome/ember-fontawesome/-/ember-fontawesome-0.2.1.tgz#266d6d402e4d41eff85d43efb05269319fdab8fd"
+  integrity sha512-yGWv9pbsF5VJVbnEvydDZnU/BZ1eru+rZ0kAwmD1gaYPUvmqO3wi+Sshlp5yA1OjBVtcZ9qV/YAZr1oiBkjZFg==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.0"
-    broccoli-file-creator "^1.1.1"
-    broccoli-merge-trees "^2.0.0"
-    broccoli-plugin "^1.3.0"
-    broccoli-rollup "^2.0.0"
-    broccoli-source "^1.1.0"
+    broccoli-file-creator "^2.1.1"
+    broccoli-merge-trees "^3.0.2"
+    broccoli-plugin "^3.0.0"
+    broccoli-rollup "^4.1.1"
+    broccoli-source "^3.0.0"
     camel-case "^3.0.0"
     ember-ast-helpers "0.3.5"
-    ember-cli-babel "^6.16.0"
-    ember-cli-htmlbars "^3.0.0"
+    ember-cli-babel "^7.7.3"
+    ember-cli-htmlbars "^3.0.1"
     ember-get-config "^0.2.4"
+    find-yarn-workspace-root "^1.2.1"
     glob "^7.1.2"
-    rollup-plugin-node-resolve "^3.0.2"
+    rollup-plugin-node-resolve "^5.2.0"
 
 "@fortawesome/fontawesome-common-types@^0.2.21":
   version "0.2.21"
@@ -3483,6 +3484,13 @@
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@types/parse-json/-/parse-json-4.0.0.tgz#2f8bb441434d163b35fb8ffdccd7138927ffb8c0"
   integrity sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==
+
+"@types/resolve@0.0.8":
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/@types/resolve/-/resolve-0.0.8.tgz#f26074d238e02659e323ce1a13d041eee280e194"
+  integrity sha512-auApPaJf3NPfe18hSoJkp8EbZzer2ISk7o8mCC3M9he/a04+gbMF97NkpD2S8riMGvm4BMRI59/SZQSaLTKpsQ==
+  dependencies:
+    "@types/node" "*"
 
 "@types/rimraf@^2.0.2":
   version "2.0.4"
@@ -5757,7 +5765,7 @@ broccoli-rollup@^1.0.3:
     symlink-or-copy "^1.1.8"
     walk-sync "^0.3.1"
 
-broccoli-rollup@^2.0.0, broccoli-rollup@^2.1.1:
+broccoli-rollup@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/broccoli-rollup/-/broccoli-rollup-2.1.1.tgz#0b77dc4b7560a53e998ea85f3b56772612d4988d"
   integrity sha512-aky/Ovg5DbsrsJEx2QCXxHLA6ZR+9u1TNVTf85soP4gL8CjGGKQ/JU8R3BZ2ntkWzo6/83RCKzX6O+nlNKR5MQ==
@@ -6150,6 +6158,11 @@ builtin-modules@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/builtin-modules/-/builtin-modules-2.0.0.tgz#60b7ef5ae6546bd7deefa74b08b62a43a232648e"
   integrity sha512-3U5kUA5VPsRUA3nofm/BXX7GVHKfxz0hOBAPxXrIvHzlDRkQVqEn6yi8QJegxl4LzOHLdvb7XF5dVawa/VVYBg==
+
+builtin-modules@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/builtin-modules/-/builtin-modules-3.1.0.tgz#aad97c15131eb76b65b50ef208e7584cd76a7484"
+  integrity sha512-k0KL0aWZuBt2lrxrcASWDfwOLMnodeQjodT/1SxEQAXsHANgo6ZC/VEaSEHCXt7aSTZ4/4H5LKa+tBXmW7Vtvw==
 
 builtin-status-codes@^3.0.0:
   version "3.0.0"
@@ -9442,12 +9455,11 @@ ember-scroll-to-target@^1.0.0:
     ember-cli-babel "7.1.3"
     ember-cli-htmlbars "3.0.1"
 
-ember-social-share@^0.3.4:
-  version "0.3.5"
-  resolved "https://registry.yarnpkg.com/ember-social-share/-/ember-social-share-0.3.5.tgz#4eeccedec884127b5942fb035568432df5ad5325"
-  integrity sha512-cHQQ7+MGtcw3T//JoMIpY75JiHFzrdBMlxAyBFPi6BvTJplPwtebZfU7Uuxg+S0VRxPgeT64ECxTfwdHRpdXLA==
+"ember-social-share@https://github.com/D3AH/ember-social-share":
+  version "0.3.4"
+  resolved "https://github.com/D3AH/ember-social-share#e852860e2ec21fedde9e99189e2d9a6bdcac8ed1"
   dependencies:
-    "@fortawesome/ember-fontawesome" "0.1.9"
+    "@fortawesome/ember-fontawesome" "^0.2.1"
     "@fortawesome/free-brands-svg-icons" "^5.1.0-11"
     "@fortawesome/free-solid-svg-icons" "^5.1.0-11"
     ember-cli-babel "^6.8.2"
@@ -16263,7 +16275,7 @@ rollup-plugin-commonjs@^8.0.2:
     resolve "^1.4.0"
     rollup-pluginutils "^2.0.1"
 
-rollup-plugin-node-resolve@^3.0.0, rollup-plugin-node-resolve@^3.0.2:
+rollup-plugin-node-resolve@^3.0.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/rollup-plugin-node-resolve/-/rollup-plugin-node-resolve-3.4.0.tgz#908585eda12e393caac7498715a01e08606abc89"
   integrity sha512-PJcd85dxfSBWih84ozRtBkB731OjXk0KnzN0oGp7WOWcarAFkVa71cV5hTJg2qpVsV2U8EUwrzHP3tvy9vS3qg==
@@ -16271,6 +16283,17 @@ rollup-plugin-node-resolve@^3.0.0, rollup-plugin-node-resolve@^3.0.2:
     builtin-modules "^2.0.0"
     is-module "^1.0.0"
     resolve "^1.1.6"
+
+rollup-plugin-node-resolve@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-node-resolve/-/rollup-plugin-node-resolve-5.2.0.tgz#730f93d10ed202473b1fb54a5997a7db8c6d8523"
+  integrity sha512-jUlyaDXts7TW2CqQ4GaO5VJ4PwwaV8VUGA7+km3n6k6xtOEacf61u0VXwN80phY/evMcaS+9eIeJ9MOyDxt5Zw==
+  dependencies:
+    "@types/resolve" "0.0.8"
+    builtin-modules "^3.1.0"
+    is-module "^1.0.0"
+    resolve "^1.11.1"
+    rollup-pluginutils "^2.8.1"
 
 rollup-pluginutils@^1.5.0:
   version "1.5.2"
