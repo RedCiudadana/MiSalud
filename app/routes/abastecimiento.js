@@ -9,7 +9,6 @@ export default Route.extend({
     return RSVP.hash({
       consultas: this.spreadsheets.fetch('consultas'),
       rows: this.spreadsheets.fetch('abastecimiento').then((models) => {
-        console.log(models);
         return models.map((model) => {
           model.trazadores1MFebrero = parseInt(model.trazadores1MFebrero);
           model.quirurgicoTrazador1MFebrero = parseInt(model.quirurgicoTrazador1MFebrero);

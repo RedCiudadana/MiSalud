@@ -18,8 +18,6 @@ export default Controller.extend({
     let compras = this.model.compras;
 
     if(this.currentSort) {
-      console.log(this.currentSort);
-
       if(this.currentSort.firstObject.isAscending) {
         compras = compras.sortBy(this.currentSort.firstObject.valuePath);
       } else {
