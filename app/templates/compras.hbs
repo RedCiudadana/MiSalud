@@ -28,12 +28,13 @@
       <div class="col-12 text-center">
         <div class="bg-light rounded w-100 overflow-hidden">
           <div class="w-100 bg-primary text-white py-3">
-            <h6>Monto Total de compras adjudicadas</h6>
-            <small>(Del 1/03/2020 al 30/03/2020)</small>
+            <h6>
+              {{{this.montoTotal.titulo}}}
+            </h6>
           </div>
           <div class="w-100 bg-light text-primary py-4">
             <h6>
-              Q {{this.montoTotal.Unidad}}
+              Q {{this.montoTotal.unidad}}
             </h6>
           </div>
         </div>
@@ -42,11 +43,13 @@
         <div class="bg-light rounded w-100 overflow-hidden">
           <div class="w-100 bg-primary text-white py-3">
             <h6>
-              Concursos Realizados
+              {{{this.concursos.titulo}}}
             </h6>
           </div>
           <div class="w-100 bg-light text-primary py-4">
-            <h6>{{this.concursos.Unidad}}</h6>
+            <h6>
+              {{this.concursos.unidad}}
+            </h6>
           </div>
         </div>
       </div>
@@ -54,11 +57,13 @@
         <div class="bg-light rounded w-100 overflow-hidden">
           <div class="w-100 bg-primary text-white py-3">
             <h6>
-              Adjudicados Terminados
+              {{{this.concursosTerminados.titulo}}}
             </h6>
           </div>
           <div class="w-100 bg-light text-primary py-4">
-            <h6>{{this.concursosTerminados.Unidad}}</h6>
+            <h6>
+              {{this.concursosTerminados.unidad}}
+            </h6>
           </div>
         </div>
       </div>
@@ -66,12 +71,12 @@
         <div class="bg-light rounded w-100 overflow-hidden">
           <div class="w-100 bg-primary text-white py-3">
             <h6>
-              Concursos vigentes
+              {{{this.concursosVigente.titulo}}}
             </h6>
           </div>
           <div class="w-100 bg-light text-primary py-4">
             <h6>
-              {{this.concursosVigente.Unidad}}
+              {{this.concursosVigente.unidad}}
             </h6>
           </div>
         </div>
@@ -108,11 +113,11 @@
           @searchField="Unidad"
           @allowClear="true"
           @selected={{this.filterUnidad}}
-          @options={{this.UnidadOptions}}
+          @options={{this.unidadOptions}}
           @onChange={{action (mut this.filterUnidad)}}
         as |compra|>
           <small>
-            {{compra.Unidad}}
+            {{compra.unidad}}
           </small>
         </PowerSelect>
       </div>
