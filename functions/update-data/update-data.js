@@ -5,6 +5,8 @@ const fetch = require('node-fetch');
 exports.handler = async function (event, context) {
   const doc = new GoogleSpreadsheet(process.env.SPREADSHEET_KEY);
 
+  console.log(process.env.GOOGLE_PRIVATE_KEY);
+
   await doc.useServiceAccountAuth({
     client_email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
     private_key: process.env.GOOGLE_PRIVATE_KEY,
