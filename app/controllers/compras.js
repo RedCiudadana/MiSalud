@@ -84,7 +84,7 @@ export default Controller.extend({
   }),
 
 
-  UnidadOptions: computed('model', function() {
+  unidadOptions: computed('model', function() {
     return this.model.compras.uniqBy('Unidad');
   }),
     ModalidadLCEOptions: computed('model', function() {

@@ -15,6 +15,10 @@ export default Route.extend({
     return RSVP.hash({
       compras: this.spreadsheets.fetch('compras').then((compras) => compras.map((compra) => {
         compra.Monto = parseFloat(compra.Monto.replace('Q','').replace(' ', '').replace(/,/g, ''));
+        compra['MES DE PUBLICACIÓN'] = compra['MES DE PUBLICACIÓN'].replace(/\s/g,'');
+        compra['MES DE ADJUDICACIÓN'] = compra['MES DE ADJUDICACIÓN'].replace(/\s/g,'');
+        compra['MES DE CIERRE RECEPCIÓN'] = compra['MES DE CIERRE RECEPCIÓN'].replace(/\s/g,'');
+
         return compra;
       })),
       comprasresumen: this.spreadsheets.fetch('comprasresumen'),
@@ -108,9 +112,9 @@ export default Route.extend({
 
     let vigentes = meses.map((mes) => {
       // return model.compras.filterBy('MES DE PUBLICACIÓN', mes).length;
-      return model.compras.filter((compra) => {
+      return model.compras.slice(0, 2).filter((compra) => {
         let mesActual = meses.indexOf(mes);
-        let mesPublicacion  = meses.indexOf(compra['MES DE PUBLICACIÓN']);
+        let mesPublicacion = meses.indexOf(compra['MES DE PUBLICACIÓN']);
         let mesAdjudicacion = meses.indexOf(compra['MES DE ADJUDICACIÓN']);
 
         return mesPublicacion <= mesActual && ((mesAdjudicacion > mesActual))
