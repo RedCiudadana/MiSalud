@@ -3,6 +3,7 @@
 {{title "NuestraSalud - RedCiudadana"}}
 
 {{!-- Navbar --}}
+{{#if (not this.isEmbed) }}
 <BsNavbar id="navbar" class="shadow-sm" @toggleBreakpoint="xl" @backgroundColor="white" @type="light" @position="sticky-top" @fluid={{true}} as |navbar|>
   <div class="navbar-header">
     {{navbar.toggle}}
@@ -87,12 +88,13 @@
     </navbar.nav>
   </navbar.content>
 </BsNavbar>
-
+{{/if}}
 {{!-- Outlet --}}
 <main>
   {{outlet}}
 </main>
 
+{{#if (not this.isEmbed) }}
 {{!-- Footer --}}
 <div id="footer">
   <div class="container first">
@@ -169,3 +171,4 @@
     </div>
   </div>
 </div>
+{{/if}}
