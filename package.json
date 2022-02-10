@@ -86,7 +86,7 @@
     "husky": "^4.2.5",
     "lint-staged": "^10.0.2",
     "loader.js": "^4.7.0",
-    "node-sass": "^4.9.3",
+    "node-sass": "^7.0.0",
     "prember": "^1.0.3",
     "sass": "^1.14.0",
     "stylelint": "^13.0.0",
